@@ -4,7 +4,7 @@ import Game from "./components/game.component";
 function App() {
   return (
     <div
-      className="App h-[100dvh] w-full bg-cover bg-center shadow-xl flex  "
+      className="App h-[100dvh] h-[100vh] w-full bg-cover bg-center shadow-xl flex  "
       style={{ backgroundImage: `url(${homeImg})` }}
     >
       <Game />
