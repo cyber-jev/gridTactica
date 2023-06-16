@@ -24,29 +24,36 @@ const Game = () => {
   const moves = history.map((squares, move) => {
     let description;
     if (move > 0) {
-      description = "Go to move #" + move;
+      description = "move #" + move;
     } else {
-      description = "Go to game start";
+      description = "game start";
     }
 
     return (
-      <li key={move}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
+      <li
+        key={move}
+        className=" text-cyan-50 bg-[#4a4a4a] px-0.5 mb-0.5 rounded"
+      >
+        <button onClick={() => jumpTo(move)} className="">
+          {description}
+        </button>
       </li>
     );
   });
 
   return (
-    <div className="game bg-transparent text-orange-600 m-auto p-2 flex gap-5  justify-between">
-      <div className="game-board m-auto">
+    <div className={`game bg-transparent m-auto text-[#04638f] p-2 flex`}>
+      <div className="game-board m-auto mr-3 overflow-auto ">
         <Board5x5
           xIsNext={xIsNext}
           squares={currentSquares}
           onPlay={handlePlay}
+          // className={xIsNext == true ? "text-[#04638f]" : "text-[#a2333a]"}
         />
       </div>
-      <div className="game-info m-auto">
-        <ol>{moves}</ol>
+      <div className="">
+        <h3>Go to</h3>
+        <ol className="text-sm">{moves}</ol>
       </div>
     </div>
   );
