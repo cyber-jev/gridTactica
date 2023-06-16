@@ -1,3 +1,4 @@
+import React from "react";
 import Square from "./square.component";
 
 const Board3x3 = ({ xIsNext, squares, onPlay }) => {
