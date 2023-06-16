@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import Board3x3 from "./board3x3.component";
 import "../App.css";
+import Board4x4 from "./board4x4.component";
 
 const Game = () => {
   const [history, setHistory] = useState([Array(9).fill(null)]);
@@ -37,7 +38,7 @@ const Game = () => {
   return (
     <div className="game bg-transparent text-orange-600 m-auto p-2 flex gap-5  justify-between">
       <div className="game-board m-auto">
-        <Board3x3
+        <Board4x4
           xIsNext={xIsNext}
           squares={currentSquares}
           onPlay={handlePlay}
