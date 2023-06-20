@@ -13,7 +13,7 @@ const Board4x4 = ({ xIsNext, squares, onPlay }) => {
   const winner = calculateWinner(squares);
   let status;
   if (winner) {
-    status = "Winner: " + winner;
+    status = "Winner: " + (winner === "X" || winner === "c" ? "X" : "0");
   } else {
     status = "Next player: " + (xIsNext ? "X" : "0");
   }
