@@ -71,6 +71,7 @@ const calculateWinner = (squares) => {
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c, d] = lines[i];
 
+    console.log(squares[a]);
     // ? because we render a react element inside our square we would need check if the square is not null
     // ? then we access the name value from our react element object like so
     if (
