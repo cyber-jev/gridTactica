@@ -1,12 +1,12 @@
 import React from "react";
 import Square from "./square.component";
-import { XPlayer, OPlayer } from "./players.component";
+import { X, O } from "./players.component";
 
 const Board5x5 = ({ xIsNext, squares, onPlay }) => {
   const handleClick = (i) => {
     if (squares[i] || calculateWinner(squares)) return;
     const nextSquares = squares.slice();
-    xIsNext ? (nextSquares[i] = <XPlayer />) : (nextSquares[i] = <OPlayer />);
+    xIsNext ? (nextSquares[i] = <X />) : (nextSquares[i] = <O />);
     onPlay(nextSquares);
   };
 

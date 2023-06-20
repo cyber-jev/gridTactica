@@ -1,5 +1,5 @@
 import homeImg from "./assets/gridtactica-background.jpeg";
-import Game from "./components/game.component";
+import GameBoard from "./components/game.component";
 
 function App() {
   return (
@@ -7,7 +7,7 @@ function App() {
       className="App h-[100dvh] h-[100vh] w-full bg-cover bg-center shadow-xl flex  "
       style={{ backgroundImage: `url(${homeImg})` }}
     >
-      <Game />
+      <GameBoard />
     </div>
   );
 }

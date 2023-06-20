@@ -6,7 +6,7 @@ import Board5x5 from "./board5x5.component";
 import "../App.css";
 
 const Game = () => {
-  const [history, setHistory] = useState([Array(9).fill(null)]);
+  const [history, setHistory] = useState([Array(16).fill(null)]);
   const [currentMove, setCurrentMove] = useState(0);
   const xIsNext = currentMove % 2 === 0;
   const currentSquares = history[currentMove];
@@ -44,11 +44,10 @@ const Game = () => {
   return (
     <div className={`game bg-transparent m-auto text-[#04638f] p-2 flex`}>
       <div className="game-board m-auto mr-3 overflow-auto">
-        <Board5x5
+        <Board4x4
           xIsNext={xIsNext}
           squares={currentSquares}
           onPlay={handlePlay}
-          // className={xIsNext === 0 ? "text-[#a2333a]" : ""}
         />
       </div>
       <div className="">

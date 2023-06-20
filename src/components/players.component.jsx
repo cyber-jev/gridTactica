@@ -1,7 +1,7 @@
-export const XPlayer = () => {
-  return <span className="text-[#a2333a]">X</span>;
+export const X = () => {
+  return <span className="text-[#04638f]">X</span>;
 };
 
-export const OPlayer = () => {
-  return <span className="text-[#04638f]">0</span>;
+export const O = () => {
+  return <span className="text-[#a2333a]">0</span>;
 };

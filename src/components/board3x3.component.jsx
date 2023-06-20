@@ -1,12 +1,12 @@
 import React from "react";
 import Square from "./square.component";
-import { XPlayer, OPlayer } from "./players.component";
+import { X, O } from "./players.component";
 
 const Board3x3 = ({ xIsNext, squares, onPlay }) => {
   const handleClick = (i) => {
     if (squares[i] || calculateWinner(squares)) return;
     const nextSquares = squares.slice();
-    xIsNext ? (nextSquares[i] = <XPlayer />) : (nextSquares[i] = <OPlayer />);
+    xIsNext ? (nextSquares[i] = <X />) : (nextSquares[i] = <O />);
     onPlay(nextSquares);
   };
 
@@ -58,8 +58,16 @@ const calculateWinner = (squares) => {
 
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c] = lines[i];
-    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-      return squares[a];
+    // ? because we render a react element inside our square we would need check if the square is not null
+    // ? then we access the name value from our react element object like so
+    if (squares[a] !== null && squares[b] !== null && squares[c] !== null) {
+      if (
+        squares[a].type.name &&
+        squares[a].type.name === squares[b].type.name &&
+        squares[a].type.name === squares[c].type.name
+      ) {
+        return squares[a].type.name;
+      }
     }
   }
 
