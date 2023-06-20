@@ -43,12 +43,12 @@ const Game = () => {
 
   return (
     <div className={`game bg-transparent m-auto text-[#04638f] p-2 flex`}>
-      <div className="game-board m-auto mr-3 overflow-auto ">
+      <div className="game-board m-auto mr-3 overflow-auto">
         <Board5x5
           xIsNext={xIsNext}
           squares={currentSquares}
           onPlay={handlePlay}
-          // className={xIsNext == true ? "text-[#04638f]" : "text-[#a2333a]"}
+          // className={xIsNext === 0 ? "text-[#a2333a]" : ""}
         />
       </div>
       <div className="">
