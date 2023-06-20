@@ -13,6 +13,7 @@ const Board4x4 = ({ xIsNext, squares, onPlay }) => {
   const winner = calculateWinner(squares);
   let status;
   if (winner) {
+    // ? I had a glitch from vercel where winner 'X' shows as "c" and "0" shows as "f"
     status = "Winner: " + (winner === "X" || winner === "c" ? "X" : "0");
   } else {
     status = "Next player: " + (xIsNext ? "X" : "0");
