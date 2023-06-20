@@ -85,14 +85,25 @@ const calculateWinner = (squares) => {
 
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c, d, e] = lines[i];
+
+    // ? because we render a react element inside our square we would need check if the square is not null
+    // ? then we access the name value from our react element object like so
     if (
-      squares[a] &&
-      squares[a] === squares[b] &&
-      squares[a] === squares[c] &&
-      squares[a] === squares[d] &&
-      squares[a] === squares[e]
+      squares[a] !== null &&
+      squares[b] !== null &&
+      squares[c] !== null &&
+      squares[d] !== null &&
+      squares[e] !== null
     ) {
-      return squares[a];
+      if (
+        squares[a].type.name &&
+        squares[a].type.name === squares[b].type.name &&
+        squares[a].type.name === squares[c].type.name &&
+        squares[a].type.name === squares[d].type.name &&
+        squares[a].type.name === squares[e].type.name
+      ) {
+        return squares[a].type.name;
+      }
     }
   }
 

@@ -1,12 +1,10 @@
 import React from "react";
 import { useState } from "react";
-import Board3x3 from "./board3x3.component";
-import Board4x4 from "./board4x4.component";
-import Board5x5 from "./board5x5.component";
+import Board3x3 from "../components/board3x3.component";
 import "../App.css";
 
-const Game = () => {
-  const [history, setHistory] = useState([Array(16).fill(null)]);
+const Game3x3 = () => {
+  const [history, setHistory] = useState([Array(9).fill(null)]);
   const [currentMove, setCurrentMove] = useState(0);
   const xIsNext = currentMove % 2 === 0;
   const currentSquares = history[currentMove];
@@ -42,20 +40,24 @@ const Game = () => {
   });
 
   return (
-    <div className={`game bg-transparent m-auto text-[#04638f] p-2 flex`}>
-      <div className="game-board m-auto mr-3 overflow-auto">
-        <Board4x4
-          xIsNext={xIsNext}
-          squares={currentSquares}
-          onPlay={handlePlay}
-        />
-      </div>
-      <div className="">
-        <h3>Go to</h3>
-        <ol className="text-sm">{moves}</ol>
+    <div className=" flex">
+      <div
+        className={`game bg-transparent m-auto text-[#04638f] p-2 flex debug`}
+      >
+        <div className="game-board m-auto mr-3 overflow-auto">
+          <Board3x3
+            xIsNext={xIsNext}
+            squares={currentSquares}
+            onPlay={handlePlay}
+          />
+        </div>
+        <div className="">
+          <h3>Go to</h3>
+          <ol className="text-sm">{moves}</ol>
+        </div>
       </div>
     </div>
   );
 };
 
-export default Game;
+export default Game3x3;
