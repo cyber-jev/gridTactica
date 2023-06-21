@@ -2,7 +2,7 @@ import { Outlet, Link } from "react-router-dom";
 
 const Navigation = () => {
   return (
-    <div className="debug w-full">
+    <div className=" w-full">
       <div className="text-white p-5  flex gap-3 w-full h-[30px] ">
         <Link className="" to="/">
           3x3

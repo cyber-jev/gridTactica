@@ -20,14 +20,6 @@ function App() {
           </Route>
           {/* Add more routes here if needed */}
         </Routes>
-
-        {/* <Routes>
-      <Route path='/' element={<Navigation />}>
-        <Route index element={<Home />} />
-        <Route path='shop' element={<Shop />} />
-        <Route path='auth' element={<Authentication />} />
-      </Route>
-    </Routes> */}
       </div>
     </BrowserRouter>
   );

@@ -40,10 +40,8 @@ const Game3x3 = () => {
   });
 
   return (
-    <div className=" flex">
-      <div
-        className={`game bg-transparent m-auto text-[#04638f] p-2 flex debug`}
-      >
+    <div className="">
+      <div className={`game bg-transparent m-auto text-[#04638f] p-2 flex `}>
         <div className="game-board m-auto mr-3 overflow-auto">
           <Board3x3
             xIsNext={xIsNext}

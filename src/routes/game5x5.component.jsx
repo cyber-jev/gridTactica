@@ -30,7 +30,7 @@ const Game5x5 = () => {
     return (
       <li
         key={move}
-        className=" text-cyan-50 bg-[#4a4a4a] px-0.5 mb-0.5 rounded"
+        className=" text-cyan-50 text-base text-center bg-[#4a4a4a] p-0.5 mb-0.5 rounded"
       >
         <button onClick={() => jumpTo(move)} className="">
           {description}
@@ -41,7 +41,7 @@ const Game5x5 = () => {
 
   return (
     <div
-      className={`m-auto bg-transparent w-max h-max  text-[#04638f] p-6 grid items-center justify-center`}
+      className={`m-auto w-max h-max  text-[#04638f] p-6 grid items-center justify-center`}
     >
       <div className="  overflow-aut">
         <Board5x5
@@ -50,9 +50,14 @@ const Game5x5 = () => {
           onPlay={handlePlay}
         />
       </div>
-      <div className="debug h-max">
-        <h3>Go to</h3>
-        <ol className="text-sm grid grid-cols-6 gap-1 w-max">{moves}</ol>
+      <div className="m-auto relative py-2 px-[2.1rem] lg:px-[1.5rem]">
+        <div className="absolute inset-0 backdrop-filter backdrop-blur-xl bg-opacity-50"></div>
+        <h3 className="relative z-10 font-bold text-[#9c3c7c] text-xl">
+          Go to
+        </h3>
+        <ol className="text-sm grid grid-cols-6 gap-1 w-max relative z-10 lg:grid-cols-9">
+          {moves}
+        </ol>
       </div>
     </div>
   );
