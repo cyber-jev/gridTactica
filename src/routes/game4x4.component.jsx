@@ -40,19 +40,6 @@ const Game4x4 = () => {
   });
 
   return (
-    // <div className={`game bg-transparent m-auto text-[#04638f] p-2 flex`}>
-    //   <div className="game-board m-auto mr-3 overflow-auto">
-    //     <Board4x4
-    //       xIsNext={xIsNext}
-    //       squares={currentSquares}
-    //       onPlay={handlePlay}
-    //     />
-    //   </div>
-    //   <div className="">
-    //     <h3>Go to</h3>
-    //     <ol className="text-sm">{moves}</ol>
-    //   </div>
-    // </div>
     <div
       className={`m-auto w-max h-max  text-[#04638f] p-6 grid items-center justify-center`}
     >

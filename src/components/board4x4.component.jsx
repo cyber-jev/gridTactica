@@ -1,5 +1,5 @@
 import React from "react";
-import Square from "./square.component";
+import BoardRows from "./boardRows.component";
 import { X, O } from "./players.component";
 
 const Board4x4 = ({ xIsNext, squares, onPlay }) => {
@@ -24,33 +24,7 @@ const Board4x4 = ({ xIsNext, squares, onPlay }) => {
   return (
     <div>
       <div className="text-xl font-bold text-[#9c3c7c] py-3">{status}</div>
-      <div>
-        <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
-        <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
-        <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
-        <Square value={squares[3]} onSquareClick={() => handleClick(3)} />
-      </div>
-
-      <div>
-        <Square value={squares[4]} onSquareClick={() => handleClick(4)} />
-        <Square value={squares[5]} onSquareClick={() => handleClick(5)} />
-        <Square value={squares[6]} onSquareClick={() => handleClick(6)} />
-        <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
-      </div>
-
-      <div>
-        <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
-        <Square value={squares[9]} onSquareClick={() => handleClick(9)} />
-        <Square value={squares[10]} onSquareClick={() => handleClick(10)} />
-        <Square value={squares[11]} onSquareClick={() => handleClick(11)} />
-      </div>
-
-      <div>
-        <Square value={squares[12]} onSquareClick={() => handleClick(12)} />
-        <Square value={squares[13]} onSquareClick={() => handleClick(13)} />
-        <Square value={squares[14]} onSquareClick={() => handleClick(14)} />
-        <Square value={squares[15]} onSquareClick={() => handleClick(15)} />
-      </div>
+      <BoardRows squares={squares} handleClick={handleClick} matrix={4} />
     </div>
   );
 };
@@ -74,8 +48,6 @@ const calculateWinner = (squares) => {
   for (let i = 0; i < lines.length; i++) {
     const [a, b, c, d] = lines[i];
 
-    // ? because we render a react element inside our square we would need check if the square is not null
-    // ? then we access the name value from our react element object like so
     if (
       squares[a] !== null &&
       squares[b] !== null &&
