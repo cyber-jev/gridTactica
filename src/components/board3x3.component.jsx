@@ -20,21 +20,21 @@ const Board3x3 = ({ xIsNext, squares, onPlay }) => {
   }
 
   return (
-    <div className="board-container">
-      <div className="status">{status}</div>
-      <div className="board-row">
+    <div>
+      <div className="text-xl font-bold text-[#9c3c7c] py-3">{status}</div>
+      <div>
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
         <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
       </div>
 
-      <div className="board-row">
+      <div>
         <Square value={squares[3]} onSquareClick={() => handleClick(3)} />
         <Square value={squares[4]} onSquareClick={() => handleClick(4)} />
         <Square value={squares[5]} onSquareClick={() => handleClick(5)} />
       </div>
 
-      <div className="board-row">
+      <div>
         <Square value={squares[6]} onSquareClick={() => handleClick(6)} />
         <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />

@@ -21,7 +21,7 @@ const Board5x5 = ({ xIsNext, squares, onPlay }) => {
 
   return (
     <div>
-      <div>{status}</div>
+      <div className="text-xl font-bold text-[#9c3c7c] py-3">{status}</div>
       <div>
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />

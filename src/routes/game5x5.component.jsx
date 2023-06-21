@@ -53,7 +53,7 @@ const Game5x5 = () => {
       <div className="m-auto relative py-2 px-[2.1rem] lg:px-[1.5rem]">
         <div className="absolute inset-0 backdrop-filter backdrop-blur-xl bg-opacity-50"></div>
         <h3 className="relative z-10 font-bold text-[#9c3c7c] text-xl">
-          Go to
+          Go to move
         </h3>
         <ol className="text-sm grid grid-cols-6 gap-1 w-max relative z-10 lg:grid-cols-9">
           {moves}
