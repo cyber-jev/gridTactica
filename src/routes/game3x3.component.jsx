@@ -30,7 +30,7 @@ const Game3x3 = () => {
     return (
       <li
         key={move}
-        className="  text-cyan-50 text-base text-center bg-[#4a4a4a] p-0.5 mb-0.5 rounded"
+        className="text-cyan-50 text-base text-center bg-[#4a4a4a] p-0.5 mb-0.5 rounded"
       >
         <button onClick={() => jumpTo(move)} className="">
           {description}
@@ -52,10 +52,10 @@ const Game3x3 = () => {
       </div>
       <div className="m-auto relative py-3 px-[2.1rem] lg:px-[1.5rem]">
         <div className="absolute inset-0 backdrop-filter backdrop-blur-xl bg-opacity-50"></div>
-        <h3 className="relative z-10 font-bold text-[#9c3c7c] text-xl">
+        <h3 className="relative z-10 py-2 font-bold text-[#9c3c7c] text-xl">
           Go to move
         </h3>
-        <ol className="text-sm py-1 grid grid-cols-3 gap-1 w-max relative z-10 lg:grid-cols-4">
+        <ol className="text-sm py-1 grid grid-cols-3 gap-1 w-max relative z-10 lg:grid-cols-5">
           {moves}
         </ol>
       </div>
