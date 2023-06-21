@@ -6,7 +6,9 @@ const Board4x4 = ({ xIsNext, squares, onPlay }) => {
   const handleClick = (i) => {
     if (squares[i] || calculateWinner(squares)) return;
     const nextSquares = squares.slice();
-    xIsNext ? (nextSquares[i] = <X />) : (nextSquares[i] = <O />);
+    xIsNext
+      ? (nextSquares[i] = <X key={"X"} />)
+      : (nextSquares[i] = <O key={"0"} />);
     onPlay(nextSquares);
   };
 
@@ -81,12 +83,12 @@ const calculateWinner = (squares) => {
       squares[d] !== null
     ) {
       if (
-        squares[a].type.name &&
-        squares[a].type.name === squares[b].type.name &&
-        squares[a].type.name === squares[c].type.name &&
-        squares[a].type.name === squares[d].type.name
+        squares[a].key &&
+        squares[a].key === squares[b].key &&
+        squares[a].key === squares[c].key &&
+        squares[a].key === squares[d].key
       ) {
-        return squares[a].type.name;
+        return squares[a].key;
       }
     }
   }
