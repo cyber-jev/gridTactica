@@ -22,9 +22,9 @@ const Game5x5 = () => {
   const moves = history.map((squares, move) => {
     let description;
     if (move > 0) {
-      description = "move #" + move;
+      description = "#" + move;
     } else {
-      description = "game start";
+      description = "start";
     }
 
     return (
@@ -40,17 +40,19 @@ const Game5x5 = () => {
   });
 
   return (
-    <div className={`game bg-transparent m-auto text-[#04638f] p-2 flex`}>
-      <div className="game-board m-auto mr-3 overflow-auto">
+    <div
+      className={`m-auto bg-transparent w-max h-max  text-[#04638f] p-6 grid items-center justify-center`}
+    >
+      <div className="  overflow-aut">
         <Board5x5
           xIsNext={xIsNext}
           squares={currentSquares}
           onPlay={handlePlay}
         />
       </div>
-      <div className="">
+      <div className="debug h-max">
         <h3>Go to</h3>
-        <ol className="text-sm">{moves}</ol>
+        <ol className="text-sm grid grid-cols-6 gap-1 w-max">{moves}</ol>
       </div>
     </div>
   );

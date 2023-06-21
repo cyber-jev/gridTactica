@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <div
-        className="App h-[100dvh] h-[100vh] w-full bg-cover bg-center shadow-xl flex "
+        className="App min-h-[100vh] w-full bg-cover bg-center shadow-xl flex "
         style={{ backgroundImage: `url(${homeImg})` }}
       >
         <Routes>
