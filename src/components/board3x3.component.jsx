@@ -55,6 +55,5 @@ const calculateWinner = (squares) => {
 
   return null;
 };
-// Rest of the code...
 
 export default Board3x3;
