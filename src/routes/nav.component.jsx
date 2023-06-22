@@ -48,9 +48,12 @@ const Navigation = () => {
           {showRules && (
             <p className="absolute p-4 top-[2.3rem] -left-[10rem] text-lg text-center w-[20ch] bg-black lg:top-[2.5rem]">
               If the board is filled and there is no winner{" "}
-              <span className="text-[#9c3c7c] font-bold"> (tie)</span>, Next
-              Player gets to choose to go back to any move above move{" "}
-              <span className="text-[#9c3c7c] font-bold"> #3</span>
+              <span className="text-[#9c3c7c] font-bold"> (tie)</span>,
+              <br /> Next-Player gets to choose to go back to any move above
+              move <span className="text-[#9c3c7c] font-bold"> #3</span>
+              <br />
+              <span className="text-[#9c3c7c] font-bold"> N/B</span> After
+              choosing the current Next-Players gets to play
             </p>
           )}
         </div>
